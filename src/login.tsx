@@ -86,20 +86,20 @@ export default function Login() {
 
     return (
         <>
-            <div className='flex flex-col mb-12 lg:flex-row lg:mb-0 lg:h-full'>
-                <div className='flex-6 ' >
+            <div className='flex flex-col h-auto  lg:flex-row lg:mb-0 lg:h-full'>
+                <div className='lg:flex flex-6 hidden' >
                     <div className="lg:h-full p-4">
                         <img className="w-full h-full rounded-3xl" src="/subtleBackground/subtleBackground.jpg" alt="Background" />
                     </div>
                 </div>
 
-                <div className=' flex-6 w-full lg:w-2/3 flex flex-col justify-center space-y-4 items-center'>
-                    <h1 className="text-5xl mt-12 lg:mt-0 font-bold text-center w-full">Welcome Back!</h1>
+                <div className=' flex-6 w-full lg:w-2/3 mt-20 lg:mt-0 flex flex-col justify-center space-y-4 items-center'>
+                    <h1 className="text-4xl lg:text-5xl mt-12 lg:mt-0 font-bold text-center w-full">Welcome Back!</h1>
                     <p>Continue with Google or enter your details</p>
-                    <div className="flex flex-col w-full items-center">
+                    <div className="flex flex-col w-[75%] lg:w-2/3 items-center">
                         <GoogleLoginButton title="Log in with Google" />
                     </div>
-                    <div className="flex  w-2/3 flex-col mt-16">
+                    <div className="flex w-[75%] lg:w-2/3 flex-col mt-16">
                         <Form {...form}>
                             <form onSubmit={form.handleSubmit(submit)} className="space-y-8 mt-12 w-full">
                                 <FormField
@@ -107,7 +107,7 @@ export default function Login() {
                                     name="email"
                                     render={({ field }) => (
                                         <FormItem className="w-full flex flex-col items-start">
-                                            <FormLabel className="text-lg">Email</FormLabel>
+                                            <FormLabel className="text-sm lg:text-lg">Email</FormLabel>
                                             <FormControl>
                                                 <Input className="w-full h-12"
                                                     type='text'

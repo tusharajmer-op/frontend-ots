@@ -102,19 +102,19 @@ function Signup() {
 
   return (
     <>
-      <div className='flex flex-col mb-12 lg:flex-row lg:mb-0 lg:h-full'>
-        <div className='flex-6' >
+      <div className='flex flex-col  lg:flex-row lg:mb-0 h-auto lg:h-full'>
+        <div className='lg:flex flex-6 hidden' >
           <div className="h-full p-4">
             <img className="w-full h-full rounded-3xl" src="/subtleBackground/subtleBackground.jpg" alt="Background" />
           </div>
         </div>
-        <div className='flex-6  lg:w-2/3 flex flex-col justify-center space-y-4 items-center'>
-          <h1 className="text-5xl font-bold text-center w-full">Create new account</h1>
+        <div className='flex-6 w-full lg:w-2/3 lg:mt-0 flex flex-col pt-2 justify-center space-y-4 items-center'>
+          <h1 className=" text-4xl lg:text-5xl font-bold text-center w-full">Create new account</h1>
           <p>Continue with Google or enter your details</p>
-          <div className="flex flex-col w-full items-center">
+          <div className="flex flex-col w-[75%] lg:w-2/3 items-center">
             <GoogleLoginButton title="Sign up with Google" />
           </div>
-          <div className="flex  w-2/3 flex-col mt-16">
+          <div className="flex w-[75%] lg:w-2/3 flex-col mt-16">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(submit)} className="space-y-8 mt-12 w-full">
                 {['name', 'email', 'password', 'confirmPassword'].map((fieldName) => (
@@ -124,7 +124,7 @@ function Signup() {
                     name={fieldName as "name" | "email" | "password" | "confirmPassword"}
                     render={({ field }) => (
                       <FormItem className="w-full flex flex-col items-start">
-                        <FormLabel className="text-lg">{fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}</FormLabel>
+                        <FormLabel className="text-sm lg:text-lg">{fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}</FormLabel>
                         <FormControl>
                           <Input className="w-full h-12"
                             type={fieldName.includes('password') || fieldName.includes('confirmPassword') ? 'password' : 'text'}
@@ -142,7 +142,7 @@ function Signup() {
             </Form>
           </div>
           <div>
-            <p className="text-sm mt-8">Already have an account? <Link to="/log-in" className="text-blue-600">Login</Link></p>
+            <p className="text-sm my-8">Already have an account? <Link to="/" className="text-blue-600">Login</Link></p>
           </div>
         </div>
       </div>

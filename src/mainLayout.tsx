@@ -5,7 +5,7 @@ import Footer from './components/ui/footer.tsx'; // Adjust the path if necessary
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col h-auto min-h-screen">
       <div className="flex-grow">
         <Outlet />
       </div>

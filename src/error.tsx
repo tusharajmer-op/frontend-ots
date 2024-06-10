@@ -8,7 +8,7 @@ export default function ErrorPage() {
             <div className="flex flex-col space-y-5">
                 <h1 className="text-2xl">404 Not Found</h1>
                 <p>Sorry, the page you are looking for does not exist.</p>
-                <Button variant="black" onClick={() => navigate('/Dashboard')}>Go back to Home</Button>
+                <Button variant="black" onClick={() => navigate('/')}>Go back to Home</Button>
             </div>
         </div>
     )

@@ -72,7 +72,7 @@ export default function GoogleLoginButton(props: { title: string }) {
     })
 
     return (
-        <Button variant='outline' className="w-2/3 h-12 mt-12"><span className="flex flex-row items-center" onClick={signIn}><img className="h-8 me-5" src="/google.png" alt="google icon" /> {title}
+        <Button variant='outline' className="w-full h-12 mt-12"><span className="flex flex-row items-center" onClick={signIn}><img className="h-8 me-5" src="/google.png" alt="google icon" /> {title}
         </span></Button>
     )
 }
